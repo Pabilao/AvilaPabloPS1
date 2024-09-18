@@ -1,0 +1,37 @@
+
+<div class="maincont">
+    <div class="sidemenu-container "
+    [style.backgroundColor]= "theme"
+    [style.width]= "widthMenu + '%' " 
+    [style.display]= "visibleMenu ? 'flex' : 'none' "
+    >
+        <div class="item">
+            <img [src]="imageUrl" />
+            <p> {{userName}} </p>
+            <button style="margin-left: auto;" (click)="setVisibilityMenu()" >Back</button> 
+
+        </div>
+
+        <div class="item" id="i1">
+            <p><span>📅</span> Dashboard</p>
+        </div>
+
+        <div class="item" id="i1">
+            <p><span>👨</span> Profile</p>
+        </div>
+        <div class="item" id="i1">
+            <button class="btn" (click)="setThemeColor('lightgreen')" >Change Color</button>
+            <button class="btn" (click)="setSizesMenu()" >Change Size</button>
+        </div>
+    </div>
+        
+    <div class="i2">
+        <h1 class="text">Ejercicio 2</h1>
+    </div>
+    <div class="i3"
+    [style.opacity]="visibleMenu ? '0' : '1'"
+    [style.pointerEvents]="visibleMenu ? 'none' : 'all'">
+    <button class="botn i33" (click)="setVisibilityMenu()">Menu</button>   
+    </div>
+</div>
+
